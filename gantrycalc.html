@@ -1,0 +1,51 @@
+<div class = "container">
+        <h2 class = "sectionheaders">GANTRY CALCULATOR</h2>
+
+    <!-- Lifting capacity -->
+        <div class = "labels">
+            <label for = "cap-lifting"class = "cal_labels">How much weight are you lifting?</label>
+        </div>
+        <div class = "textboxes">
+            <input type="text" class = "txt" id = "cap-txtbox" value = "">
+        </div>
+        <div class = "slider-wrapper">
+            <input type="range" name="slide1" class ="slider" step="100" min = "0" max = "10000" id = "cap-slider">
+            <div class = "amount">
+                <label for = "cap-lifting" id = "cap-disp">0</label>
+            </div>
+
+        </div>
+
+        <!--Distance spanning-->
+        <div class = "labels">
+                <label for = "dis-lifting" class = "cal_labels">How much distance are you spanning?</label>
+            </div>
+            <div class = "textboxes">
+                <input type="text" class = "txt" id = "dis-txtbox" value = "">
+            </div>
+            <div class = "slider-wrapper">
+
+                <input type="range" name="slide1" class ="slider" step="1" min = "0" max = "180" id = "dis-slider">
+                <div class = "amount">
+                    <label for = "dis-lifting" id = "dis-disp">0</label>
+                </div>
+            </div>
+        <!--Height lifting-->
+        <div class = "labels">
+                <label for = "ht-lifting"class = "cal_labels">What height do you need to span?</label>
+            </div>
+            <div class = "textboxes">
+                <input type="text" class = "txt" id = "ht-txtbox" value = "">
+            </div>
+            <div class = "slider-wrapper">
+
+                <input type="range" name="slide1" class ="slider" step="1" min = "60" max = "168" id = "ht-slider" orient="vertical">
+                <div class = "amount">
+                    <label for = "ht-lifting" id = "ht-disp">0</label>
+                </div>
+            </div>
+            <br>
+            <input type="button" id="calc-gantry" value  = "submit" onclick="showresults()" class = "buttons"><br>
+            <ul id = "results"></ul>
+    </div>    
+    <script src = "calc.js"></script>

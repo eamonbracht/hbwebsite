@@ -1,0 +1,147 @@
+<head>
+        <link rel="stylesheet" type="text/css" href="style-mobile.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="java.js"></script>
+        <script src = "map.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1nuhFH5YcIED7GyQK3zpTZ7N_Xy_dyBU&callback=initMap"></script>
+</head>
+<header class = "parallaxcontact">
+        <div id="logo" class="menuUp">
+                <a href = "index.html"><img src="hblogo_box.png"></a>
+                <div id="navToggle"><a href="#">Menu</a></div>
+        </div>
+        <div class = "centered">
+                <h1 id = "other">Contact Us</h1>
+        </div>
+        <nav>
+        <ul>
+        <li><a href="index.html">HOME PAGE</a></li>
+        <li>
+                <a href="solutions.html">SOLUTIONS <span class = "toggle">Expand</span><span class="caret"></span></a>
+                <nav>
+                <ul>
+                <li><a href="gantries.html">Gantries</a></li>
+                <li><a href="flattopdolly.html">Dollies</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Machining</a></li>
+                </ul>
+                </nav>
+                </li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html" id = "active">CONTACT</a></li>
+
+        </ul>
+        </nav>
+</header>
+<body>
+        <div id="map"></div>
+        <!-- <div class = "contact info box"> -->
+                
+        <div class = "contactform">
+                <form action="send_form_email.php" method="post">
+                        <h1>Contact us</h1>
+                        <br>
+                        <div class = "sections">
+                                <label for = "FirstName">Name<span class = "reqiured">*</span></label>
+                                <input type="text" name = "FirstName" class = "contactbox" placeholder = "First">
+                                <input type = "text" name = "LastName"class = "contactbox" placeholder = "last">
+                        </div>
+                        <div class = "sections">
+                                <label for = "StreetAddress">Address<span class = "reqiured">*</span></label>
+                                <input type="text" id = "address" name = "StreetAddress" class = "contactbox" placeholder = "Street Address">
+                                <input type="text" id = "address" name = "Address2" class = "contactbox" placeholder = "Address Line 2">
+                                <div class = "addressflexbox"> 
+                                        <input type="text"  name = "City" class = "contactbox" placeholder = "City" id = "flexcontact">
+                                        <input type="text"  name = "State" class = "contactbox" placeholder = "State/Province/Region"id = "flexcontact">
+                                        <input type="text"  name = "Postal" class = "contactbox" placeholder = "Postal" id = "flexcontact">
+                                        <input type="text"  name = "Country" class = "contactbox" placeholder = "Country" id = "flexcontact">
+                                </div>
+                                </div>
+                        <div class = "sections">
+                                <label for = "phone">Phone<span class = "reqiured">*</span></label>
+                                <input type="tel" name = "phone" class = "contactbox" placeholder = "phone">
+                                <label for = "email">Email Address<span class = "reqiured">*</span></label>
+                                <input type="email" name = "email" class = "contactbox" placeholder = "email">
+                        </div>
+                        <div class - "sections">
+                                <label for = "message" >Message<span class = "reqiured">*</span></label>
+                                        <textarea placeholder="MESSAGE" name = "message"></textarea>
+                        </div>
+                        <button class = "sendbutton"><span>SEND YOUR EMAIL</span></button>
+
+                </form>  
+                </div>        
+                <div class = "location">
+                        <div class = "contact-header">
+                                H&B's Contacts
+                        </div>
+                        <div class = "locationsandpeople">
+                                <div class = "locationheader">H&B Machine Corp.</div>
+                                <div class = "contact-location-info">
+                                        H&B Machine Corporation <br>
+        
+                                        1943 W. Walnut Street<br>
+                                        Chicago, IL 60612-2487 <br>
+                                        
+                                        United States of America <br>
+                                        <a href="https://goo.gl/maps/imTR4y9DrrF2">Click here for location</a> <br>
+                                        <span class = "bold">T</span> +312 829 4850 <br>
+                                        <span class = "bold">F</span> +312 829 8451 <br>
+                                        <span class = "bold">E</span> <a href="mailto:info@hbmachine.com">info@hbmachine.com</a> <br>
+                                </div>
+                        </div>
+                        <div class = "locationsandpeople">
+                                <div class = "locationheader">Philip Bracht</div>
+                                <div class = "contact-location-info">
+                                        President and CEO <br>
+        
+                                        1943 W. Walnut Street<br>
+                                        Chicago, IL 60612-2487 <br>
+                                        
+                                        United States of America <br>
+                                                <span class = "bold">E</span> <a href="mailto:phil@hbmachine.com">phil@hbmachine.com</a> <br>
+                                </div>
+                        </div>
+                        <div class = "locationsandpeople">
+                                <div class = "locationheader">George Bracht</div>
+                                <div class = "contact-location-info">
+                                        President and CEO <br>
+        
+                                        1943 W. Walnut Street<br>
+                                        Chicago, IL 60612-2487 <br>
+                                        
+                                        United States of America <br>
+                                        <span class = "bold">E</span> <a href="mailto:george@hbmachine.com">george@hbmachine.com</a> <br>
+                                </div>
+                        </div>
+                
+                
+                </div>
+        <!-- </div> -->
+        
+</body>
+
+<footer class = "site-footer">
+                <div class = "foot">
+                    <ul>
+                            <li><a href="index.html">HOME PAGE</a></li>
+                            <li><a href="solutions.html">SOLUTIONS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                    </ul> 
+                </div>
+                <div class = "contactinfo">
+                        <p>H&B Machine Corporation | 1943 W. Walnut Ave. Chicago, IL 60612
+                        | (312) 829-4850</p>
+        
+                    </div>
+
+                    <div class = "makermark">
+                        <p class = "love">Made with <i class="fa fa-heart-o" style="color:red"></i> in Chicago</p>
+                    </div> 
+                    
+</footer>
