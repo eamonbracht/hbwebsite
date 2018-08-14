@@ -19,7 +19,7 @@
 .skates {
     background: url("/productphotos/channel\ dolly.png");
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 749px) {
     .prodimg_dolly {
         width: 50%!important;
     }
