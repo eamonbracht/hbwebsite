@@ -132,6 +132,7 @@ header {
                 header > nav > ul > li > nav > ul > li > a {
                     color: rgba(255,255,255,.85);
                     transition: 300ms all ease;
+
                 }
     
                     header > nav > ul > li > nav > ul > li:hover > a {
@@ -221,18 +222,34 @@ header {
     header > div#logo > div#navToggle {
         display: none;
     }
- 
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInFromBottom {
+        0% {
+            transform: translateY(50%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
     header {
         background-color: white;
-        /* flex-direction: row; */
+        flex-direction: row;
         /* display: inline-block; */
-        /* line-height: 90px; */
+        /* line-height: 20px; */
         position: relative;
         padding: 0 3rem;
         text-align: center;
         width: 100%;
     }
         header > div#logo {
+            /* animation: 1s ease-out 0s 1 slideInFromBottom; */
             /* background-color: transparent; */
             line-height: 90px;
             padding-bottom: 2em;
@@ -244,30 +261,25 @@ header {
             }
  
     header > nav {
+        /* animation: 1s ease-out 0s 1 slideInFromLeft; */
         background-color: transparent;
         display: inline-block;
         margin-bottom: 5%;
     }
  
         header > nav > ul {
-
             background-color: #292929;
-            /* margin: 1em; */
             display:inline-block;
-            /* flex-flow: row wrap;
-            justify-content: flex-end; */
         }
  
             header nav > ul > li {
                 border-bottom: none;
                 display:inline;
-
             }
  
                 header nav > ul > li > a {
                     padding: 25px 20px;
                     float:left;
-
                 }
  
                     header nav > ul > li > a span.toggle {
@@ -294,128 +306,72 @@ header {
                         }
 
     header > nav > ul > li:hover > nav {
+        text-align: left;
         background-color: rgb(51,51,51);
-        border-radius: .25em;
-        box-shadow: 0 2px 8px rgba(0,0,0,.6);
-        display: inline-block;
-        line-height: 3em;
-        right: -50%;
-        width: auto;
+        border-radius: 0px !important;
+        box-shadow: none;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 71px;
+        right: 142px;
+        width: 100px;
+        z-index: 100;
     }
-    header > nav > ul > li > nav > ul > li {
-        display: inline;
+    header > nav > ul > li > nav > ul > li > a {
+        width: 100%;
     }
-
     
 }
 #active {
     background-color: #ffc816;
     color:#292929;
 }
-
+#parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
 .parallaxhome { 
-    /* The image used */
-    background: url("3of4.jpg");
-    /* background-size: cover; */
-
-    /* Set a specific height */
+    background: url("gantryimages/3of4.jpg");
     height: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
 } 
+
 .parallaxproducts { 
-    /* The image used */
     background: url("gantry.jpg");
-    /* background-size: cover; */
-
-    /* Set a specific height */
     height: 74%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-} 
+}
 
 .parallaxabout { 
-    /* The image used */
     background: 
     linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ),url("extraimages/redflamingo.jpg");
-    /* background-size: cover; */
-
-    /* Set a specific height */
+    ),url("vintagephotos/originalshop.jpg");
     height: 105%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
 } 
+
 .parallaxsolutions { 
-    /* The image used */
-    background:
-     
-    url("1of4.jpg");
-
-    /* Set a specific height */
+    background:url("/gantryimages/1of4.jpg");
     height: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
 } 
 
 .parallaxcontact { 
-    /* The image used */
-    background: 
-  url("4of4.jpg");
-
-    /* Set a specific height */
+    background: url("gantryimages/4of4.jpg");
     height: 74%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
 }
 
 .parallaxgantry {
-    background: url("4of4.jpg");
-
-    /* Set a specific height */
+    background: url("gantryimages/4of4.jpg");
     height: 74%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
 }
 
-
+.parallaxservices {
+    background: url("vintagephotos/welding.jpg");
+    height: 74%;
+}
 
 .boxt {
     text-transform: uppercase;
@@ -478,9 +434,6 @@ header {
 .soltext > p {
     color: #757575;
 }
-
-
-
 .products {
     display: inline-block;
     text-align: center;    
@@ -498,12 +451,9 @@ header {
     /* width: 10%; */
 }
 .category > img{
-    /* flex-wrap: wrap; */
-    /* padding: 0 4px; */
     flex: 50%;
     width: 200px;
-    /* width: 10%; */
-    /* display: flex; */
+
 }
 .centeredproduct {
     position: absolute;
@@ -853,11 +803,20 @@ Gantry Calculator
 
 }
 
-#map {
-    z-index: -1;
-    width: 100%;
-    height: 50%;
-    background-color: grey;
+.googlemap {
+    position: relative;
+    padding-bottom: 75%; /* 4:3 ratio*/
+    height: 0;
+    overflow: hidden;
+}
+
+.googlemap iframe {
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+width: 100% !important;
+height: 100% !important;
 }
 .industbox {
     /* overflow:auto; */

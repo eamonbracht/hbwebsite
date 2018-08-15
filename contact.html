@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1nuhFH5YcIED7GyQK3zpTZ7N_Xy_dyBU&callback=initMap"></script>
 </head>
-<header class = "parallaxcontact">
+<header class = "parallaxcontact" id = "parallax">
         <div id="logo" class="menuUp">
                 <a href = "index.html"><img src="hblogo_box.png"></a>
                 <div id="navToggle"><a href="#">Menu</a></div>
@@ -31,6 +31,8 @@
                 </ul>
                 </nav>
                 </li>
+                <li><a href="machining.html">MACHINING</a></li>
+
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="contact.html" id = "active">CONTACT</a></li>
 
@@ -38,11 +40,13 @@
         </nav>
 </header>
 <body>
-        <div id="map"></div>
+        <div class="googlemap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.1055842744827!2d-87.67810490729254!3d41.88532679243014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2d38250c2bb1%3A0x1c8fd23c41723b0!2sH+%26+B+Machine+Corporation!5e0!3m2!1sen!2sus!4v1534288289610" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
         <!-- <div class = "contact info box"> -->
                 
         <div class = "contactform">
-                <form action="send_form_email.php" method="post">
+                <form action="https://formspree.io/ejbracht@sbcglobal.net" method="POST">
                         <h1>Contact us</h1>
                         <br>
                         <div class = "sections">
@@ -71,7 +75,7 @@
                                 <label for = "message" >Message<span class = "reqiured">*</span></label>
                                         <textarea placeholder="MESSAGE" name = "message"></textarea>
                         </div>
-                        <button class = "sendbutton"><span>SEND YOUR EMAIL</span></button>
+                        <button class = "sendbutton" name = "submit"><span>SEND YOUR EMAIL</span></button>
 
                 </form>  
                 </div>        
