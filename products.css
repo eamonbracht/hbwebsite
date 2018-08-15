@@ -78,6 +78,13 @@
     }
 
 }
+
+.solproddiv {
+    width: 20%;
+    height: 80%;
+    background-color: #ffc816;
+}
+
 #productpage {
     background-color: #efefef;
 }

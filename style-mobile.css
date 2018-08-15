@@ -186,24 +186,40 @@ header {
     #other {
         font-size: 8em !important;
     }
+    .aboutheaders {
+        background: none;
+        margin-top: 7.5%;
+        font-family: 'Roboto Condensed', sans-serif;
+        z-index: -1;
+        text-transform: uppercase;
+        color: #ffc816;
+        font-weight: bold;
+        font-size: 4em;
+        text-align: center;
+    }
+    
+    .storytext {
+        background-color: rgba(255, 255, 255, 0.5);
+        font-family: Arial, monospace;
+        font-size: 11pt;
+        height: auto;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        color: #757575;
+        z-index: 1000;
+    }
     .imgdiv_1 {
-        width: 70% !important;
-        float: left;
+        width: 100% !important;
     }
     .imgdiv_2 {
-        width: 70% !important;
+        width: 100% !important;
         float: right;
     }
     .imgdiv_3 {
-        width: 70% !important;
+        width: 100% !important;
         float: left;
-    }
-    .storytext {
-        float: right;
-        text-align: right!important;
-        padding: 1em 3em 1em 1em;
-        width: 70% !important;
-        display: grid;
     }
     #storytextleft {
         float: left;
@@ -281,6 +297,10 @@ header {
                     padding: 25px 20px;
                     float:left;
                 }
+                header > nav > ul > li:hover > a {
+                    box-shadow: 0px 6px #efefef;
+                }
+
  
                     header nav > ul > li > a span.toggle {
                         display: none;
@@ -387,12 +407,6 @@ header {
     width: 50%;
     padding: 10pt;
 }
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-
-}
 
 .solutionsimages > .soltext {
     padding-left: 10%;
@@ -407,6 +421,8 @@ header {
     margin-bottom: 18%;
 
 }
+
+
 .soltext > h1 {
     line-height:1em;
     overflow-wrap: normal;
@@ -605,6 +621,7 @@ textarea {
     color: #757575;
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 }
+
 .sendbutton {
     display: inline-flex;
     /* 
@@ -747,18 +764,22 @@ Gantry Calculator
     /* background:#f5f5f5; */
 }
 
+.aboutsection {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+
 .imgdiv_1 {
     background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),url("arial.jpg");
+   url("vintagephotos/phil.jpg");
     /* float: left; */
     width: 100%;
-    height: 30%;
+    height: 100%;
     display: inline-block;
 
-    position: relative; 
+    /* position: relative;  */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -895,9 +916,8 @@ height: 100% !important;
     width: 100%;
     height: 40%;
     z-index: -1;
-
-    /* background-position: 50% 50%; */
 }
+
 .industries > a> .interior {
     display: inline-block;
     vertical-align: top;
@@ -912,8 +932,8 @@ height: 100% !important;
       width: 100%;
       height: 40%;
       z-index: -1;
-    /* background-position: 50% 50%; */
 }
+
 .industries > a > .pumps {
     display: inline-block;
     vertical-align: top;
@@ -961,30 +981,21 @@ height: 100% !important;
     border-bottom: 10px solid #ffc816;
 }
 
-
-.aboutheaders {
-    background: none;
-    margin-top: 15%;
-    font-family: 'Roboto Condensed', sans-serif;
-    z-index: -1;
-    text-transform: uppercase;
-    color: #ffc816;
-    font-weight: bold;
-    font-size: 4em;
-    text-align: center;
-}
-
 .storytext {
-    background-color: white;
+    background-color: #ffc816;
     font-family: Arial, monospace;
     font-size: 11pt;
     height: auto;
-    width: 80%;
-    margin: auto;
-    text-align: right;
+    position: absolute;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     color: #757575;
     z-index: 1000;
+    top: 80%;
 }
+
 #storytextleft {
     text-align: left;
 }
