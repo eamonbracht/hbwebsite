@@ -8,6 +8,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="java.js"></script>
         <script src = "calc.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <header id = "productpage">
@@ -41,10 +43,221 @@
             <div class = "prodimg_2ton"></div><div class = "prodinfo">
                 <p class = "product-description-header">2 Ton Portable Aluminum Gantry</p>                </p>
                 <p class = "product-description-body">	
-                        Flat top dollies are ideal for handling skidded or crated machinery, large-form pieces of art and other heavy materials. Equipped with heavy-duty swivel casters for easy rolling and long wear with all welded construction. <br> <br>
-                        All our dollies have plwyood tops which extends the life span of this product considerably. This general use dolly is beloved by our customers who constantly find useful applications for this quality dolly.</p>
+                        H&B's 2 Ton Capacity Portable Aluminum Gantry is our most popular and versatile portable lifting solution. <br> Constructed from strong but light 6061 aluminum, this mid-sized gantry comes in 3 different models to suit your unique height requriements. It can be set up by one person and lift loads of up to 4,000 lbs. </p>
             </div>
         </div>
+        <div class = "rentorbuycontainer">
+                <div class = "rentorbuytext">
+                    Click below to request a quote.
+                </div>
+                <div class = "rentorbuybuttoncontainer">
+                        <div class = "rentorbuybutton" onclick = "div_showrent()" id = "rent"><p>Rent</p></div><div class = "rentorbuybutton" onclick = "div_showbuy()" id = "buy"><p>Buy</p></div>
+                </div>
+            </div>
+            <div id = "rental">
+                <div id="popupContact">
+                    <form action="https://formspree.io/ejbracht@sbcglobal.net" method="POST" id = "form" name = "Rental Request">
+                        <h2>H&B Rental Quote</h2>
+                        <div class = "closebutton" onclick = "div_hide()"><i class = "fas fa-times fa-2x"></i>
+                        </div>
+                        <div class = "popupsection">
+                                <label for="First Name" id = "normallabel">Contact Infomation<span class = "reqiured">*</span></label>
+                                <input type="text" name="First Name" class="popupfields" placeholder="First">
+                                <input type="text" name="Last Name" class="popupfields" placeholder="Last">
+                                <input type="text" name="Company" class="popupfields" placeholder="Company" id = "fullwidth">
+                                <input type="text" name="City" class="popupfields" placeholder = "City">
+                                <input type="text" name="State" class="popupfields" placeholder = "State(ex: IL)">
+                                <input type="text" name="Email" class="popupfields" placeholder = "Email">
+                                <input type="text" name="Phone" class="popupfields" placeholder = "Phone">
+                        </div>
+                        
+                        <div class = "popupsection">
+                                <label for="Gantry" id = "normallabel" >Gantry Type<span class = "reqiured">*</span></label>
+                            <div class="custom-select">
+                                <select name="Gantry" id="gantryselect" onchange = "gantrychange()">
+                                    <option>Select Gantry</option>
+                                    <option>1 Ton 5'0"-7'3"</option>
+                                    <option>2 Ton 5'0"-7'3"</option>
+                                    <option>2 Ton 6'7"-7'3"</option>
+                                    <option>2 Ton 8'0"-11'8"</option>
+                                    <option>2 Ton 8'4"-14'</option>
+                                </select>
+                            </div>
+                            <label for = "Start Date" id = "normallabel">Start/End Date<span class = "reqiured">*</span></label>
+                            <input type="date" name="Start Date" class = "popupfields" id="">
+                            <input type="date" name="End Date" class = "popupfields" id="">
+                            <label for="Beam Length" id = "normallabel">Beam Length<span class = "reqiured">*</span></label>
+                            <div class="custom-select">
+                                    <select name="beamlength" id="beamselect">
+                                        <option>Select Beam Length</option>
+                                        <option>none</option>
+                                        <option>6'</option>
+                                        <option>7'</option>
+                                        <option>8'</option>
+                                        <option>9'</option>
+                                        <option>10'</option>
+                                        <option>11'</option>
+                                        <option>12'</option>
+                                        <option>13'</option>
+                                        <option>14'</option>
+                                    </select>
+                                </div>  
+                            <!-- <input type="text" name="Gantry" id = "beamselect" class="popupfields"readonly> -->
+                            <div class = "checkmarkcontainer">
+                                <label id = "normallabel">Hoist<span class = "reqiured">*</span></label>
+                                    <ul>
+                                        <li><label class="check" id = "normallabel">1 Ton
+                                                <input type="checkbox" name = "1 Ton Hoist">
+                                                <span class="checkmark"></span>
+                                        </label> </li>
+                                        <li><label class="check" id = "normallabel">2 Ton
+                                                <input type="checkbox" name = "2 Ton Hoist">
+                                                <span class="checkmark"></span>
+                                        </label> </li>
+                                        <li><label class="check" id = "normallabel">None
+                                                <input type="checkbox"  name = "None">
+                                                <span class="checkmark"></span>
+                                        </label></li>
+                                    </ul> 
+                                </div>
+                                <div class = "checkmarkcontainer">
+                                <label id = "normallabel">Trolly<span class = "reqiured">*</span></label>
+                                <ul>
+                                    <li><label class="check" id = "normallabel">1 Ton
+                                        <input type="checkbox" name = "1 Ton Trolly">
+                                        <span class="checkmark"></span>
+                                    </label> </li>
+                                    <li><label class="check" id = "normallabel">2 Ton
+                                        <input type="checkbox" name = "2 Ton Trolly">
+                                        <span class="checkmark"></span>
+                                    </label></li>
+                                    <li><label class="check" id = "normallabel">None
+                                        <input type="checkbox" name = "None">
+                                        <span class="checkmark"></span>
+                                    </label></li>
+                                </ul>  
+                            </div>
+                     
+                        </div>
+                        <label for = "message" id = "normallabel" >Message<span class = "reqiured">*</span></label>
+                        <textarea placeholder="MESSAGE" id = "popuptextarea" name = "message"></textarea>
+                        <button class = "sendbutton" id="popupform" name = "submit"><span>SUBMIT</span></button>
+                    </form>
+    
+                </div>
+            </div>
+            <div id = "buys">
+                    <div id="popupContact">
+                        <form action="https://formspree.io/ejbracht@sbcglobal.net" method="POST" id = "form" name = "Purchase Request">
+                            <h2>H&B Quote Request</h2>
+                            <div class = "closebutton" onclick = "div_hide()"><i class = "fas fa-times fa-2x"></i>
+                            </div>
+                            <div class = "popupsection">
+                                    <label for="First Name" id = "normallabel">Contact Infomation<span class = "reqiured">*</span></label>
+                                    <input type="text" name="First Name" class="popupfields" placeholder="First">
+                                    <input type="text" name="Last Name" class="popupfields" placeholder="Last">
+                                    <input type="text" name="Company" class="popupfields" placeholder="Company" id = "fullwidth">
+                                    <input type="text" name="City" class="popupfields" placeholder = "City">
+                                    <input type="text" name="State" class="popupfields" placeholder = "State(ex: IL)">
+                                    <input type="text" name="Email" class="popupfields" placeholder = "Email">
+                                    <input type="text" name="Phone" class="popupfields" placeholder = "Phone">
+                            </div>
+                            
+                            <div class = "popupsection">
+                                    <label for="Gantry" id = "normallabel" >Gantry Type<span class = "reqiured">*</span></label>
+                                <div class="custom-select">
+                                    <select name="Gantry" id="gantryselect" onchange = "gantrychange()">
+                                        <option>Select Gantry</option>
+                                        <option>1 Ton 5'0"-7'3"</option>
+                                        <option>2 Ton 5'0"-7'3"</option>
+                                        <option>2 Ton 6'7"-7'3"</option>
+                                        <option>2 Ton 8'0"-11'8"</option>
+                                        <option>2 Ton 8'4"-14'</option>
+                                        <option>3 Ton 8'4"-14'</option>
+                                        <option>5 Ton 8'4"-14'</option>
+            
+                                    </select>
+                                </div>
+                                <label for="Beam Length" id = "normallabel">Beam Length<span class = "reqiured">*</span></label>
+                                <div class="custom-select">
+                                        <select name="Beam Length" id="rentalselect">
+                                            <option>Select Beam Length</option>
+                                            <option>none</option>
+                                            <option>6'</option>
+                                            <option>7'</option>
+                                            <option>8'</option>
+                                            <option>9'</option>
+                                            <option>10'</option>
+                                            <option>11'</option>
+                                            <option>12'</option>
+                                            <option>13'</option>
+                                            <option>14'</option>
+                                        </select>
+                                    </div>  
+                                <!-- <input type="text" name="Gantry" id = "beamselect" class="popupfields"readonly> -->
+                                <div class = "checkmarkcontainer">
+                                <label id = "normallabel">Hoist<span class = "reqiured">*</span></label>
+                                    <ul>
+                                        <li><label class="check" id = "normallabel">1 Ton
+                                                <input type="checkbox" name = "1 Ton Hoist">
+                                                <span class="checkmark"></span>
+                                        </label> </li>
+                                        <li><label class="check" id = "normallabel">2 Ton
+                                                <input type="checkbox" name = "2 Ton Hoist">
+                                                <span class="checkmark"></span>
+                                        </label> </li>
+                                        <li><label class="check" id = "normallabel">3 Ton
+                                                <input type="checkbox" name = "3 Ton Hoist">
+                                                <span class="checkmark"></span>
+                                        </label> </li>
+                                        <li><label class="check" id = "normallabel">5 Ton
+                                                <input type="checkbox" name = "5 Ton Hoist">
+                                                <span class="checkmark"></span>
+                                        </label></li>
+                                        <li><label class="check" id = "normallabel">None
+                                                <input type="checkbox"  name = "None">
+                                                <span class="checkmark"></span>
+                                        </label></li>
+                                    </ul> 
+                                </div>
+                                <div class = "checkmarkcontainer">
+                                <label id = "normallabel">Trolly<span class = "reqiured">*</span></label>
+                                <ul>
+                                    <li><label class="check" id = "normallabel">1 Ton
+                                        <input type="checkbox" name = "1 Ton Trolly">
+                                        <span class="checkmark"></span>
+                                    </label> </li>
+                                    <li><label class="check" id = "normallabel">2 Ton
+                                        <input type="checkbox" name = "2 Ton Trolly">
+                                        <span class="checkmark"></span>
+                                    </label></li>
+                                    <li><label class="check" id = "normallabel">3 Ton
+                                        <input type="checkbox" name = "3 Ton Trolly">
+                                        <span class="checkmark"></span>
+                                    </label> </li>
+                                    <li><label class="check" id = "normallabel">5 Ton
+                                        <input type="checkbox" name = "5 Ton Trolly">
+                                        <span class="checkmark"></span>
+                                    </label></li>
+                                    <li><label class="check" id = "normallabel">None
+                                        <input type="checkbox" name = "None">
+                                        <span class="checkmark"></span>
+                                    </label></li>
+                                </ul>  
+                            </div>
+                         
+                            </div>
+                            <label for = "message" id = "normallabel" >Message<span class = "reqiured">*</span></label>
+                            <textarea placeholder="MESSAGE" id = "popuptextarea" name = "message"></textarea>
+                            <button class = "sendbutton" id="popupform"><span>SUBMIT</span></button>
+                        </form>
+        
+                    </div>
+                </div>
+    
+    
+    
+            <script src = "popup.js"></script>
         <div class = "techspecs">
             <div class = "techspecs-header">
                 <p>Technical Details</p>

@@ -7,12 +7,16 @@ function check_empty() {
     }
     }
     //Function To Display Popup
-    function div_show() {
-    document.getElementById('abc').style.display = "block";
+    function div_showrent() {
+    document.getElementById('rental').style.display = "block";
+    }
+    function div_showbuy() {
+      document.getElementById('buys').style.display = "block";
     }
     //Function to Hide Popup
     function div_hide(){
-    document.getElementById('abc').style.display = "none";
+    document.getElementById('rental').style.display = "none";
+    document.getElementById('buys').style.display = "none";
     }
 
     var x, i, j, selElmnt, a, b, c;
@@ -36,6 +40,7 @@ for (i = 0; i < x.length; i++) {
     c.addEventListener("click", function(e) {
         /*when an item is clicked, update the original select box,
         and the selected item:*/
+        
         var y, i, k, s, h;
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         h = this.parentNode.previousSibling;
@@ -43,6 +48,9 @@ for (i = 0; i < x.length; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
+            // var box = document.getElementById("gantryholder");
+            // box.value = h.innerHTML;
+
             y = this.parentNode.getElementsByClassName("same-as-selected");
             for (k = 0; k < y.length; k++) {
               y[k].removeAttribute("class");
@@ -71,10 +79,10 @@ function closeAllSelect(elmnt) {
   var x, y, i, arrNo = [];
   x = document.getElementsByClassName("select-items");
   y = document.getElementsByClassName("select-selected");
-  var box = document.getElementById("rental");
-  box.inn
+  // box.innerHTML = y.value.toString();
   for (i = 0; i < y.length; i++) {
     if (elmnt == y[i]) {
+
       arrNo.push(i)
     } else {
       y[i].classList.remove("select-arrow-active");
@@ -89,3 +97,4 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
