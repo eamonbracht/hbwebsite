@@ -74,9 +74,19 @@
     }
     .outer-prodlist {
         width: 80% !important;
-
     }
-
+    .rentorbuycontainer {
+        width: 30% !important;
+        left: 0 !important;
+        margin-left: none;
+        margin-right: none;
+        position: absolute;
+    }
+    #popupContact > form {
+        width: 600px;
+        vertical-align: top;
+        margin: 0 auto;
+    }
 }
 
 .solproddiv {
@@ -355,6 +365,222 @@ body > .outer-prodlist > a:hover > .productcontainer {
 .buttonlink:hover{
     background-color: #292929;
 }
+
+.rentorbuycontainer {
+    width: 80%;
+    height: 15%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    /* margin-top: 30px; */
+    background-color: white;
+}
+.rentorbuycontainer > .rentorbuytext {
+    text-align: center;
+    position: relative;
+    padding: 12px;
+    bottom: 0;
+    height: 30%;
+    width: 100%;
+    font: 'Roboto Condensed', monospace;
+    letter-spacing: -1;
+    font-size: 12pt;
+    display: block;
+    margin-bottom: 5%;
+
+}
+.rentorbuycontainer > .rentorbuybuttoncontainer {
+    width: 100%;
+    height: 70%;
+    /* background-color: black; */
+    bottom: 0;
+    position: relative;
+}
+.rentorbuycontainer > .rentorbuybuttoncontainer > .rentorbuybutton {
+    /* position: absolute; */
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3vh;
+    transition: all .2s ease-in-out;
+
+}
+.rentorbuycontainer > .rentorbuybuttoncontainer > .rentorbuybutton > p {
+    top: 25%;
+    position: relative;
+}
+
+
+.rentorbuycontainer > .rentorbuybuttoncontainer > .rentorbuybutton#rent {
+    background-color: #ffc816;
+    color: #292929;
+
+}
+.rentorbuycontainer > .rentorbuybuttoncontainer > .rentorbuybutton#buy:hover {
+    background-color: transparent;
+    color: #ffc816;
+    /* box-shadow: -8px 8px #292929; */
+
+}
+.rentorbuycontainer > .rentorbuybuttoncontainer > .rentorbuybutton#rent:hover {
+    background-color: transparent;
+    color: #ffc816;
+    /* box-shadow: -8px 8px #ffc816; */
+}
+
+
+.rentorbuycontainer > .rentorbuybuttoncontainer > .rentorbuybutton#buy {
+    background-color: #292929;
+    color: #ffc816;
+}
+
+#abc {
+    font-family: 'Roboto Condensed' monospace;
+    width:100%;
+    height:100%;
+    opacity:.95;
+    top:0;
+    left:0;
+    display:none;
+    position:fixed;
+    background-color:#313131;
+    overflow:auto;
+}
+
+div#popupContact {
+    position:relative;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#popupContact > form {
+    max-width:70%;
+    height: 800px;
+    padding: 5% 5% 0 5%;
+    background-color: #757575;
+}
+#popupContact > form > #close {
+    display: flex;
+    position: absolute;
+    cursor:pointer;
+    right:25%;
+    top:-14px;
+}
+
+#popupContact > form > h2 {
+    text-align:Left;
+    border-radius:10px 10px 0 0
+}
+
+#fullwidth {
+    width: 97%;
+}
+.popupfields {
+    width: 48%;
+    background-color: white;
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 13pt;
+    text-transform: uppercase;
+    margin: .5em 0 .5em 0;
+    padding-left: 1em;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+    height: 4em;
+    transition: all .2s ease-in-out;
+}
+.popupfields:focus {
+    box-shadow: -4px 4px #ffc816;
+}
+.popupsection {
+    padding: 1em 0 1em 0;
+    flex: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#submit {
+    text-decoration:none;
+    width:100%;
+    text-align:center;
+    display:block;
+    background-color:#FFBC00;
+    color:#fff;
+    border:1px solid #FFCB00;
+    padding:10px 0;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:5px
+}
+
+.custom-select {
+    margin: 5px 2px 5px 0;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Arial;
+    width: 48%;
+
+  }
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  .select-selected {
+    width: 100%;
+
+    background-color: white;
+  }
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #292929 transparent transparent transparent;
+  }
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+
+  }
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #757577;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+
+
+
 
 
 

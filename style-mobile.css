@@ -141,6 +141,18 @@ header {
                     }
 
 @media only screen and (min-width: 800px) {
+    .imgdiv_1, .imgdiv_2, .imgdiv_3 {
+        height: 100%!important;
+    }
+    .parallaxproducts {
+        height: 74%;
+    }
+    .parallaxgantry {
+        height: 74%;
+    }
+    .parallaxcontact {
+        height: 74%
+    }
     .listofservices {
         width: 100%!important;
     }
@@ -181,8 +193,6 @@ header {
         height: 100%;
         top: 100%;
         display: inline-block;
-        background-attachment: fixed;
-        background-position: left;
     }
 
     .solpage {
@@ -191,12 +201,14 @@ header {
     }
     .servpagemach{
         background:url("extraimages/machining.png");
+        background-attachment: fixed;
+
     }
     .servpaceweld {
         background:url("extraimages/welding.jpg");
     }
     #other {
-        font-size: 8em !important;
+        font-size: 9vh !important;
     }
     
     .storytext {
@@ -345,7 +357,7 @@ header {
 
 .parallaxproducts { 
     background: url("gantry.jpg");
-    height: 74%;
+    height: 100%;
 }
 
 .parallaxabout { 
@@ -364,12 +376,12 @@ header {
 
 .parallaxcontact { 
     background: url("vintagephotos/Untitled-14.jpg");
-    height: 74%;
+    height: 100%;
 }
 
 .parallaxgantry {
     background: url("gantryimages/4of4.jpg");
-    height: 74%;
+    height: 100%;
 }
 
 .parallaxservices {
@@ -496,6 +508,8 @@ header {
     top: 50%;
     left: 50%;
     width: 90%;
+    /* height: 50%; */
+    font-size: 2vh;
     transform: translate(-50%, -50%);
     /* background-color: black; */
     padding-left: 20px;
@@ -575,7 +589,7 @@ header {
     display: inline-block;
     height: auto;
     width: 100%;
-    font-size: 2em;
+    font-size: 16pt;
     padding: 15px 0 15px 0;
     text-align: center;
     text-transform: uppercase;
@@ -788,11 +802,12 @@ Gantry Calculator
 .storytext {
     position: relative;
     background-color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     /* font-family: Futura,Trebuchet MS,Arial,sans-serif;  */
     font-family: 'Roboto Condensed', monospace;
     padding: 40px;
-    font-size: 12pt;
+    /* font-size: 12pt; */
+    font-size: 3vh;
     height: auto;
     width: 90%;
     display: block;
@@ -801,7 +816,7 @@ Gantry Calculator
     letter-spacing: 2px;
     font-weight: 500;
     z-index: 1000;
-    top: 30%;
+    top: 8%;
     transition: all .3s ease-in-out;
 }
 .storytext:hover {
@@ -822,7 +837,8 @@ Gantry Calculator
    url("vintagephotos/phil.jpg");
     /* float: left; */
     width: 100%;
-    height: 100%;
+    height: 200%;
+    z-index: -1;
     display: inline-block;
 
     /* position: relative;  */
@@ -837,7 +853,7 @@ Gantry Calculator
     background: url("vintagephotos/firelathe.jpg");
     /* float: left; */
     width: 100%;
-    height: 100%;
+    height: 200%;
     
     position: relative;
     /* background-attachment: fixed; */
@@ -851,7 +867,7 @@ Gantry Calculator
     background: url("gantryimages/1of4.jpg");
     /* float: left; */
     width: 100%;
-    height: 100%;
+    height: 200%;
     
     position: relative;
     /* background-attachment: fixed; */
@@ -897,8 +913,25 @@ height: 100% !important;
     z-index: -1;
     text-align: center;
     border-bottom: 10px solid #ffc816;
-
     /* top: -5vw; */
+}
+.indcentered {
+    overflow: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: -1px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    /* height: 50%; */
+    font-size: 2vh;
+    transform: translate(-50%, -50%);
+    /* background-color: black; */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #industheadertext {
     color: #ffc816 !important;
