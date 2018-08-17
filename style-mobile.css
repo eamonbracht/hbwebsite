@@ -142,6 +142,9 @@ header {
                     }
 
 @media only screen and (min-width: 800px) {
+    .aboutcontainer {
+        font-size: 1.1vw !important;
+    }
     .imgdiv_1, .imgdiv_2, .imgdiv_3 {
         height: 100%!important;
     }
@@ -638,13 +641,14 @@ textarea {
     background:none;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding: .1em;
     width: 80%;
     height: auto;
     text-align: center;
     color: white;
     letter-spacing: 2px;
-	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1.1vh;
 }
 
 .sendbutton {
@@ -714,7 +718,7 @@ txt:focsus{
 }
 
 .centered > p {
-    font-size: 90px;
+    font-size: 80px;
     /* padding-top: 0% */
     padding-bottom: 1em;
 }
