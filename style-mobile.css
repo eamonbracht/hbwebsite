@@ -56,6 +56,7 @@ header {
     
             header > div#logo > div#navToggle > a {
                 color: rgba(255,255,255,.85);
+                color: #ffc816;
                 display: block;
                 font-size: 0.85em;
                 font-weight: 600;
@@ -213,6 +214,7 @@ header {
     
     .storytext {
         z-index: 1000;
+        height: auto;
         font-size: 14pt!important;
     }
     #storytextleft {
@@ -808,7 +810,8 @@ Gantry Calculator
     padding: 40px;
     /* font-size: 12pt; */
     font-size: 3vh;
-    height: auto;
+    height: 50% !important;
+    overflow: auto;
     width: 90%;
     display: block;
     color: #292929;
@@ -840,6 +843,7 @@ Gantry Calculator
     height: 200%;
     z-index: -1;
     display: inline-block;
+    overflow: auto;
 
     /* position: relative;  */
     /* background-attachment: fixed; */
