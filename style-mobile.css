@@ -1224,7 +1224,7 @@ footer {
 }
 .contactinfo {
     text-align: center;
-    padding-right: 40px;
+    /* padding-right: 40px; */
     font-size: 10pt;
 }
 .foot ul {

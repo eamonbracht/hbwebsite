@@ -344,7 +344,11 @@ body > .outer-prodlist > a:hover > .productcontainer {
     /* border-left: 12px solid #ffc816; */
     box-shadow: -12px 12px #ffc816;
  }
-
+ body > .outer-prodlist > a:active > .productcontainer {
+    /* border-bottom: 12px solid #ffc816; */
+    /* border-left: 12px solid #ffc816; */
+    box-shadow: -12px 12px #ffc816;
+ }
 .seemorebutton {
     text-decoration: none;
     /* display: inline-block; */
