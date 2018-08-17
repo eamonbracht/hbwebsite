@@ -202,7 +202,6 @@ header {
     }
     .servpagemach{
         background:url("extraimages/machining.png");
-        background-attachment: fixed;
 
     }
     .servpaceweld {
@@ -214,7 +213,7 @@ header {
     
     .storytext {
         z-index: 1000;
-        height: auto;
+        height: auto !important;
         font-size: 14pt!important;
     }
     #storytextleft {
@@ -810,7 +809,7 @@ Gantry Calculator
     padding: 40px;
     /* font-size: 12pt; */
     font-size: 3vh;
-    height: 50% !important;
+    height: 50%;
     overflow: auto;
     width: 90%;
     display: block;
