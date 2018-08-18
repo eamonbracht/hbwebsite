@@ -326,7 +326,8 @@
 
 .productcontainer {
     vertical-align: top;
-    width: 360;
+    width: 90%;
+    max-width:360;
     height: 630;
     display: inline-block;
     position: relative;
