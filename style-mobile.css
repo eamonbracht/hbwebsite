@@ -6,6 +6,7 @@ body {
     /* max-width: 1700px; */
     margin: 0 auto !important;
     float: none !important;
+    overflow-x: hidden;
     /* background: white; */
 
 }
