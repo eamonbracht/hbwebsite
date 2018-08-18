@@ -65,6 +65,13 @@
     .prodimg_skate {
         width: 50% !important;
     }
+    .prodimg_hoist {
+        width: 50% !important;
+        top: 0 !important;
+    }
+    .prodimg_trolly {
+        width: 50% !important;
+    }
     .prodinfo {
         width: 50% !important;
         height: 70%;
@@ -206,6 +213,30 @@
     height: 70%;
     z-index: 200;
 }
+.prodimg_hoist {
+    display: inline-block;
+    background: url("productphotos/chainhoist.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    
+    width: 100%;
+    height: 70%;
+    z-index: 200;
+}
+.prodimg_trolly {
+    display: inline-block;
+    background: url("productphotos/trolly2.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    
+    width: 100%;
+    height: 70%;
+    z-index: 200;
+}
 .prodinfo {
     display: inline-block;
     width: 100%;
@@ -241,14 +272,21 @@
 .techspecs > .techspecs-header {
     color: black;
     font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: -4px; 
-    line-height:1em;
-    font-size: 4em;
     text-align: center;
     padding-top: 50px;
     text-transform: uppercase;
     padding-right: 10%;
     padding-left: 10%;
+
+}
+.techspecs-header > p#head {
+    letter-spacing: -4px; 
+    font-size: 4em;
+    line-height:1em;
+}
+.techspecs-header > p#sub {
+    font-size: 1.5em;
+    /* line-height:1em; */
 
 }
 

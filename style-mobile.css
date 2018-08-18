@@ -139,6 +139,7 @@ header {
                     header > nav > ul > li > nav > ul > li:hover > a {
                         background-color: rgba(0,0,0,.6);
                         color: rgba(255,255,255,1);
+                        border-right: 2px solid #ffc816
                     }
 
 @media only screen and (min-width: 800px) {
@@ -156,7 +157,7 @@ header {
         height: 74%;
     }
     .parallaxcontact {
-        height: 74%
+        height: 74% !important;
     }
     .listofservices {
         width: 100%!important;
@@ -302,7 +303,7 @@ header {
                     color: #efefef;
                 }
                 header > nav > ul > li:hover > a {
-                    box-shadow: 0px 6px #efefef;
+                    box-shadow: 6px 0px #efefef;
                     color: #292929;
                 }
 
@@ -1145,7 +1146,8 @@ height: 100% !important;
     /* background-color: #ffc816; */
     color:white;
     border-color: white;
-    padding:1em 6em;
+    padding:10px 35px;
+    font-size: 12pt;
 }
 #special:hover{
     color: #ffc816;
