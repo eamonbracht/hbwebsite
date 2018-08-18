@@ -223,7 +223,6 @@ header {
         max-height: 60%;
         z-index: 1000;
         height: auto !important;
-        font-size: 14pt!important;
     }
     #storytextleft {
         float: left;
@@ -517,11 +516,9 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%;
-    /* height: 50%; */
+    width: 80%;
     font-size: 2vh;
     transform: translate(-50%, -50%);
-    /* background-color: black; */
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -529,7 +526,7 @@ header {
 
 #home {
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-    font-size: 3em;
+    font-size: 3vh;
 }
 #other {
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
@@ -821,8 +818,10 @@ Gantry Calculator
     font-family: 'Roboto Condensed', monospace;
     padding: 40px;
     /* font-size: 12pt; */
-    font-size: 3vh;
-    height: 50%;
+    /* font-size: 3vh; */
+    font-size: 14pt;
+    height: auto;
+    max-height: 50%;
     overflow: auto;
     width: 90%;
     display: block;
