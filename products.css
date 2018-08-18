@@ -504,6 +504,7 @@ body > .outer-prodlist > a:hover > .productcontainer {
 .closebutton > i {
     width: 100%;
     height: 100%;
+    position: fixed;
 }
 div#popupContact {
     position:relative;
